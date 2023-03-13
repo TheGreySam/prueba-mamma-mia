@@ -1,18 +1,20 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navigation() {
+    const setActiveClass = ({ isActive }) => (isActive ? "active text-white ms-3" : "text-white ms3");
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-success">
 
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="" id="navbarSupportedContent">
                 <ul className="navbar-nav mx-auto">
                     <h2>Pizzeria Mamma Mia!</h2>
-                    <Link to="/" className="text-white ms-3 text-decoration-none">
+                    <NavLink className={ setActiveClass } to="/">
                         Home
-                    </Link>
-                    <Link to="/Carrito" className="text-white ms-3 text-decoration-none">
+                    </NavLink>
+                    {" | "}
+                    <NavLink className={ setActiveClass} to="/Carrito">
                     Carrito
-                    </Link>
+                    </NavLink>
 
                 </ul>
 
