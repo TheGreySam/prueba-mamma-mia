@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.pizzaimg {
+  max-height: 30vh;
+  object-fit: cover;
+}
+.pizzacard {
+  width: 30vh;
+}

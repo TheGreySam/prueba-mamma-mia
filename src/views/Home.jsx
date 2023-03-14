@@ -1,23 +1,27 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import PizzaContext from "./../context";
 
 export default function Home() {
-  const [product, setProduct] = useState("");
+  //const [product, setProduct] = useState("");
   const { data } = useContext(PizzaContext);
   const datos = data;
   const navigate = useNavigate();
-  const gotoProduct = () => {
-    navigate(`/Product/${product}`);
+  const gotoProduct = (valor) => {
+    navigate(`/Product/${valor}`);
   };
+ /*  const verProduct = (valor) => {
+    console.log("valor: ", valor)
+    //setProduct(valor) 
+    gotoProduct(valor)
+  } */
   const pizzadata = datos.map((obj) => (
-    //<li key={obj.id}>{obj.id}</li>
-    <div key={obj.id} className="col-sm-6">
-      <div className="card">
-      <img src={obj.img} className="card-img-top" alt="..." />
+    <div key={obj.id} className="col">
+      <div className="card pizzacard">
+        <img src={obj.img} className="pizzaimg card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{obj.name}</h5>
-          <p className="card-text">Ingredientes:
+          <div className="card-text">Ingredientes:
             <ul>
               <li>{obj.ingredients[0]}</li>
               <li>{obj.ingredients[1]}</li>
@@ -25,9 +29,16 @@ export default function Home() {
               <li>{obj.ingredients[3]}</li>
               <li>{obj.ingredients[4]}</li>
             </ul>
-          </p>
+          </div>
           <h3 className="card-title">$ {obj.price}</h3>
-          <button className="btn btn-primary" onClick={gotoProduct}>Ver mas</button>
+          <button
+            className="btn btn-primary m-2"
+            value={obj.id}
+
+            onClick={ ({target}) => gotoProduct(target.value) }>
+            Ver mas
+          </button>
+          <button className="btn btn-danger m-2" >Añadir</button>
         </div>
       </div>
     </div>
@@ -36,14 +47,12 @@ export default function Home() {
 
   return (
     <div id="Home">
-      <h1>¡Pizzería Mamma Mia!</h1>
-      <h5>¡Tenemos las mejores pizzas que podrás encontrar!</h5>
-
-
-
-      <div class="row">
+      <div className="card bg-primary p-3">
+        <h1 className="card-title">¡Pizzería Mamma Mia!</h1>
+        <h5 className="card-text">¡Tenemos las mejores pizzas que podrás encontrar!</h5>
+      </div>
+      <div className="row">
         {pizzadata}
-
       </div>
 
     </div>
