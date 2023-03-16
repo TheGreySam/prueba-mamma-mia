@@ -4,21 +4,23 @@ export default function Navigation() {
     const setActiveClass = ({ isActive }) => (isActive ? "active text-white ms-3" : "text-white ms3");
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-success">
-
-            <div className="" id="navbarSupportedContent">
-                <ul className="navbar-nav mx-auto">
-                    <h2>Pizzeria Mamma Mia!</h2>
+                <ul className="nav navbar-nav  px-5">
+                    <li>
                     <NavLink className={ setActiveClass } to="/">
-                        Home
+                    <h2>Pizzeria Mamma Mia!</h2>
                     </NavLink>
-                    {" | "}
+                    </li>
+                    
+                </ul>
+                <ul className="navbar-nav mx-auto navbar-right">
+                <li>
                     <NavLink className={ setActiveClass} to="/Carrito">
-                    Carrito
+                    <h3>Carrito</h3>
                     </NavLink>
-
+                    </li>
                 </ul>
 
-            </div>
+            
         </nav>
 
     )

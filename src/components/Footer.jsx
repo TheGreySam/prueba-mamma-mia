@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <ul className="navbar-nav mx-auto">
                     <Link to="/" className="text-white ms-3 text-decoration-none">
-                    Home | @2023
+                    Pizzeria Mamma Mia! | @2023
                     </Link>
                     </ul>
            
