@@ -4,18 +4,22 @@ import React from "react";
 import PizzaContext from "../context/context";
 
 export default function Product() {
-    const { data } = useContext(PizzaContext);
-    const datos = data;
+    const { state } = useContext(PizzaContext);
+    //const datos = data;
+    
     const valor = useParams("");
+    console.log(valor)
+    console.log(state.data)
 
-    const PizzaDataOne = datos.filter(dato => {
+     const PizzaDataOne = state.data.filter(dato => {
         return dato.id === valor.id
     })
     console.log(PizzaDataOne)
 
     return (
         <div id="Product">
-            <div className="container">
+            
+             <div className="container">
             <div className="card m-3">
                 <div className="row g-0">
                     <div className="col-md-4">
