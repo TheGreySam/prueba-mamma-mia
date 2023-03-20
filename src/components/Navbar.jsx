@@ -1,6 +1,7 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 
-export default function Navigation() {
+const Navbar = props => {
     const setActiveClass = ({ isActive }) => (isActive ? "active text-white ms-3" : "text-white ms3");
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-success">
@@ -15,7 +16,7 @@ export default function Navigation() {
                 <ul className="navbar-nav mx-auto navbar-right">
                 <li>
                     <NavLink className={ setActiveClass} to="/Carrito">
-                    <h3>Carrito</h3>
+                    <h3>Carrito ({props.cartItemCount})</h3>
                     </NavLink>
                     </li>
                 </ul>
@@ -25,3 +26,4 @@ export default function Navigation() {
 
     )
 }
+export default Navbar;

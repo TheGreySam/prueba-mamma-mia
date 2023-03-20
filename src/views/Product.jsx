@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom"
 import React from "react";
-import PizzaContext from "./../context";
+import PizzaContext from "../context/context";
 
 export default function Product() {
     const { data } = useContext(PizzaContext);

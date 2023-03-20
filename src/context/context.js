@@ -1,3 +1,3 @@
 import { createContext } from "react";
 const PizzaContext = createContext({});
-export default PizzaContext
+export default  PizzaContext; 
