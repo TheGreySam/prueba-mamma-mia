@@ -78,7 +78,7 @@ function App() {
         <Route path='/Carrito' element={<Carrito />} />
         <Route path='/Product/:id' element={<Product />} />
       </Routes>
-      <Footer></Footer>
+      <Footer />
       </BrowserRouter>
      </PizzaContext.Provider>
     </div>

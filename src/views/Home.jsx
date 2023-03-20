@@ -12,17 +12,13 @@ console.log(pizzaHomeimg)
   return (
 <div>
 <div className="card text-bg-dark">
-  <img src={pizzaHomeimg} className="card-img image" alt="..." />
-  <div className="card-img-overlay">
+  <img src={pizzaHomeimg} className="card-img pizzahome" alt="..." />
+  <div className="card-img-overlay py-5 my-5  pizzatext">
   <h1 className="card-title">¡Pizzería Mamma Mia!</h1>
         <h5 className="card-text">¡Tenemos las mejores pizzas que podrás encontrar!</h5>
   </div>
 </div>
-    <div className="card bg-primary p-3">
-        <h1 className="card-title">¡Pizzería Mamma Mia!</h1>
-        <h5 className="card-text">¡Tenemos las mejores pizzas que podrás encontrar!</h5>
-      </div>
-      <div className="row p-3">
+      <div className="row p-3 pb-5">
         { state.data.map((obj) => (
           <Item key={obj.id} obj={obj} cart={state.cart}></Item>
         ))}

@@ -9,7 +9,7 @@ const Carrito = () => {
     return (
         <div id="Carrito">
             <div className="container">
-                <div className="card">
+                <div className="card m-5 p-4 pb-5">
                     <h3 className="card-title p-2">Detalles del pedido:</h3>
                     {state.cart.map((obj) => (
                         <ItemCarrito key={obj.id} obj={obj} />

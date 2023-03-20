@@ -13,7 +13,7 @@ const ListItem = (props) => {
 
   return (
     
-        <div key={obj.id} className="col">
+        <div key={obj.id} className="col p-2">
           <div className="card pizzacard">
             <img src={obj.img} className="pizzaimg card-img-top" alt="..." />
             <div className="card-body">
@@ -40,10 +40,11 @@ const ListItem = (props) => {
               {cart.map((cartItem) =>
                 cartItem.id === obj.id ? (
                   cartItem.count > 0 ? (
-                    <span style={{ marginLeft: '5px' }}>
+                    <div className='btn bg-success text-white px-3 m-2'
+                     style={{ marginLeft: '5px' }}>
                       {' '}
-                      ({cartItem.count} en el carrito){' '}
-                    </span>
+                      {cartItem.count} en el carrito{' '}
+                    </div>
                   ) : null
                 ) : null
               )}

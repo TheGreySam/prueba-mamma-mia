@@ -1,27 +1,50 @@
 body {
   margin: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgba(193, 189, 6, 0.458)url("https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-salame.jpg?alt=media&token=ab3d4bf8-01f2-4810-982b-bd7fb6b517b2");
+  background-blend-mode: luminosity;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .pizzaimg {
   max-height: 30vh;
   object-fit: cover;
 }
+
 .pizzacard {
   width: 30vh;
 }
+
 .image {
-  max-height: 100%;
+  width: 300pt;
+  height: 100%;
   object-fit: cover;
 }
+
 .imageCarrito {
   object-fit: cover;
+}
+.pizzahome {
+  max-height: 200pt;
+  object-fit: cover;
+}
+.pizzatext {
+  text-shadow: 2px 2px 5px rgb(7, 140, 0);
 }
