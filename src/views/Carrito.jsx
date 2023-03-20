@@ -10,7 +10,7 @@ const Carrito = () => {
         <div id="Carrito">
             <div className="container">
                 <div className="card">
-                    <h3 className="card-title">Detalles del pedido:</h3>
+                    <h3 className="card-title p-2">Detalles del pedido:</h3>
                     {state.cart.map((obj) => (
                         <ItemCarrito key={obj.id} obj={obj} />
                     ))}

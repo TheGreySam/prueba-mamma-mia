@@ -22,3 +22,6 @@ code {
   max-height: 100%;
   object-fit: cover;
 }
+.imageCarrito {
+  object-fit: cover;
+}
