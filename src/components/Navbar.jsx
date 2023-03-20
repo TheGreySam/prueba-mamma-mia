@@ -16,7 +16,7 @@ const Navbar = props => {
                 <ul className="navbar-nav mx-auto navbar-right px-5">
                 <li>
                     <NavLink className={ setActiveClass} to="/Carrito">
-                    <h3>Carrito ({props.cartItemCount})</h3>
+                    <h3>Carrito)</h3>
                     </NavLink>
                     </li>
                 </ul>

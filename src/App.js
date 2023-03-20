@@ -57,11 +57,13 @@ function App() {
     });
   };
 
-  const cartItemCount = state.cart.reduce(
+/*   const cartItemCount = state.cart.reduce(
     (acc, data) => (acc += data.count),
     0
-  );
+  ); */
   console.log(Pizzas)
+  const BGimage = state.data[2].img
+  console.log(BGimage )
   
 
   return (
@@ -70,7 +72,7 @@ function App() {
      value={{ state: state, addToCart, increase, decrease, removeItem }}
      >
       <BrowserRouter>
-      <Navbar></Navbar>
+      <Navbar ></Navbar>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Carrito' element={<Carrito />} />
